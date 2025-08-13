@@ -1,0 +1,9 @@
+.header {
+    width: 300px; /* Ajusta al tamaño de tu imagen */
+    height: 100px; /* Ajusta al tamaño de tu imagen */
+    background-image: url("https://www.estudiantefunval.org/pluginfile.php/1/theme_moove/logo/1753452116/logo%202023.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    text-indent: -9999px; /* Oculta el texto */
+    overflow: hidden;
+  }

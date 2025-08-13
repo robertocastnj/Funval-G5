@@ -1,0 +1,28 @@
+body{
+padding-left: 5%;
+}
+
+.parrafo{
+    color: brown;
+    background-color: beige;
+    font-size: large;
+}
+
+.titles{
+    color: rgb(187, 45, 10);
+    font-size: 30px;
+    border-bottom: 2px solid #333;
+    display: inline-block;
+}
+
+#imagen-inicio{
+    height: 300px;
+    width: auto;
+    border-radius: 20px;
+}
+
+.imagen{
+    height: 100px;
+    width: 100px;
+    border-radius: 10px;
+}

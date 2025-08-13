@@ -1,0 +1,39 @@
+h2{
+    color: rgba(53, 88, 122, 0.855);
+    border-bottom: 1px solid #5a93ccda;
+    display: inline-block;
+}
+
+#principal{
+    width: 300px;
+    border-radius: 40px;
+}
+
+.titulos {
+    color: rgba(53, 88, 122, 0.855);
+    font-size: larger;
+    border-bottom: 1px solid #5a93ccda;
+    display: inline-block;
+}
+
+li{
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.logo{
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease;
+    width: 40px;
+}
+
+.logo:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra estándar */
+  /* box-shadow: 0 0 20px rgba(255, 0, 0, 0.7); Sombra coloreada */
+}
+
+
+.lista{
+    margin-left: 40px;
+    padding-left: 0;
+}
