@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Create Your Account</title>
+  </head>
+  <body>
+    <div class="menu">
+      <div class="menu-logo-container">
+        <img class="menu-logo" src="menu.png" alt="">
+      </div>
+      <div class="logo-container">
+        <img class="logo" src="steamlogo.png" alt="steamlogo">
+      </div>
+    </div>
+    <div class="structure">
+      <div class="title">
+        CREATE YOUR ACCOUNT
+      </div>
+      <div class="form">
+        <form action="">
+          <div class="data">
+            <label for="">Email Addres</label>
+            <input class="box-input" type="text" placeholder="" />
+          </div>
+          <div class="data">
+            <label for="">Confirm your Address</label>
+            <input class="box-input" type="text" placeholder="" />
+          </div>
+          <div class="data">
+            <label for="">Country of Residence</label>
+            <select class="box-input" id="country" name="country">
+              <option value="MX">Mexico</option>
+              <option value="US">United Satates</option>
+              <option value="ES">Spain</option>
+              <option value="BO">Bolivia</option>
+              <option value="ARG">Argentina</option>
+              <option value="CH">Chile</option>
+            </select>
+          </div>
+          <div class="captcha">
+              <div>
+                <input
+                  class="checkbox"
+                  type="checkbox"
+                  name="accept"
+                  value="yes"
+                />
+              </div>
+              <div class="text-human">
+                <label for="">I am human</label>
+              </div>
+            <div class="captcha-logo-container">
+            <img class="captcha-logo" src="hCaptcha.png" alt="captcha">
+            </div>
+          </div>
+          <div class="privacy">
+            <input type="checkbox" name="acepto" value="yes">
+            <label for="">I am 13 years of age or older and agree 
+                to the terms of the <span class="color-font">Steam Subscriber Agreement</span> and 
+                the <span class="color-font">Valve Privacy Policy</span>.</label>
+          </div>
+            <button>Continue</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
