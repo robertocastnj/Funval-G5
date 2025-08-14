@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+header{
+  background-color: blueviolet;
+  width: 100%;
+}
+
+.logo-container{
+  width: 2rem;
+}
+
+main{
+  color: white;
+  background-color: black;
+}
+footer{
+  background-color: red;
+}
