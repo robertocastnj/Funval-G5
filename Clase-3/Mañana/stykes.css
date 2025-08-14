@@ -67,10 +67,7 @@ form {
   display: flex;
   flex-direction: column;
   mn-width: 20rem;
-  background: linear-gradient(to bottom, 
-        rgb(85, 106, 133),
-        rgb(20, 49, 87)
-    );
+  background: linear-gradient(to bottom, rgb(85, 106, 133), rgb(20, 49, 87));
   margin-top: 40px;
   margin-bottom: 40px;
   padding-left: 1rem;
@@ -104,11 +101,11 @@ form {
   align-items: center;
   justify-content: center;
   gap: 8rem;
-} 
+}
 
 .fecha {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   align-items: center;
   gap: 8px;
   margin: 10px 0;
@@ -116,7 +113,7 @@ form {
 
 .hora {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   align-items: center;
   gap: 8px;
   margin: 10px 0;
