@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Inter", Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container{
+    display: flex;
+    border: red 2px solid;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.caja{
+    border: black 2px solid;
+    height: 100px;
+    width: 100px;
+    color: white;
+}
+
+.item-1{
+    background-color: blue;
+    order: 3;
+}
+.item-2{
+    background-color: brown;
+    order: 1;
+}
+.item-3{
+    background-color: darkgreen;
+    order: 2;
+}
+.item-4{
+
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <body>
+  <div class="form-container">
+    <h1>Formulario de Contacto</h1>
+    <form>
+      <div class="form-group">
+        <label for="nombre">Nombre completo:</label>
+        <input type="text" id="nombre" class="form-control">
+      </div>
+      
+      <div class="form-group">
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" class="form-control">
+      </div>
+      
+      <div class="form-group">
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" class="form-control">
+      </div>
+      
+      <div class="form-group">
+        <label for="asunto">Asunto:</label>
+        <select id="asunto" class="form-control" >
+          <option value="">Seleccione...</option>
+          <option value="consulta">Consulta</option>
+          <option value="soporte">Soporte Técnico</option>
+          <option value="ventas">Ventas</option>
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" class="form-control"></textarea>
+      </div>
+      <div class="contenedor-flex">
+        <button class="btn-submit">Enviar Mensaje</button>
+      </div>
+    </form>
+  </div>
+  </body>
+</html>
