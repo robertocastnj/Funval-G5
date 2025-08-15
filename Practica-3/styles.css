@@ -8,7 +8,14 @@ html,
 body {
   width: 100%;
   height: 100%;
+  font-family: "Inter", Arial, sans-serif;
   place-items: center;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
 }
 
 header {
@@ -17,19 +24,21 @@ header {
   height: 10%;
   align-items: center;
   justify-content: center;
+  font-size: 1rem;
   background-color: rgb(76, 175, 80);
   color: white;
 }
 
 .nav-top {
   width: 100%;
-  height: 5%;
+  height: 7%;
   background-color: rgb(51, 51, 51);
 }
 
 .menu-top {
   display: flex;
   align-items: center;
+  font-size: small;
   color: white;
   list-style: none;
 }
@@ -38,61 +47,90 @@ header {
   padding: 1rem 1rem;
 }
 
-.submenu {
-  display: none;
+main {
+  width: 100%;
+  height: auto;
 }
 
-li:hover .submenu {
-  display: block;
+.sec1 {
+  background-color: bisque;
+  width: 100%;
+  height: auto;
+  display: flex;
 }
 
-main{
-    width: 100%;
-    height: 78% ;
-    background-color: blueviolet;
-    position: static;
+.hero {
+  width: 40%;
+  height: auto;
+  margin-top: 5%;
+  margin-left: 3%;
+  margin-bottom: 5%;
 }
 
-.sec1{
-    background-color: bisque;
-    width: 100%;
-    height: 60%;
+.title-container1 {
+  width: 100%;
+  height: auto;
 }
 
-.hero{
-background-color: blue;
-width: 40%;
-height: auto;
-position: relative;
-left: 3%;
-top: 15%;
+.p-container1 {
+  width: 100%;
+  height: auto;
+  margin-top: 7%;
 }
 
-.title-container1{
-    background-color: aqua;
-    width: 100%;
+.button-container {
+  margin-top: 10%;
+  width: 30%;
+  height: 2rem;
+  color: white;
+  background-color: rgb(76, 175, 80);
 }
 
-.p-container1{
-    background-color: pink;
-    width: 100%;
-    margin-top: 7%;
-}
-.button-container{
-    margin-top: 4rem;
-width: 50%;
-height: 2rem;
+.image-container {
+  margin-top: 3%;
+  margin-left: 15%;
+  margin-right: 5%;
+  margin-bottom: 5%;
+  width: auto;
 }
 
-.sec2{
-    background-color: white;
-    width: 100%;
-    height: 40%;
+.sec2 {
+  margin-top: 2%;
+  margin-left: 3%;
+  padding-bottom: 2rem;
+  width: 96%;
+  height: auto;
 }
 
+.title-container2 {
+  width: 100%;
+  height: auto;
+  padding: 3%;
+  padding-left: 0;
+}
 
-footer{
-    width: 100%;
-    height: 7%;
-    background-color: red;
+.text {
+  background-color: rgb(240, 240, 235);
+  padding-left: 4%;
+  padding-top: 4%;
+  padding-left: 3rem;
+}
+.p-container2 {
+  padding-bottom: 1rem;
+  padding-right: 1rem;
+}
+
+.list-container {
+  padding-left: 7%;
+  padding-bottom: 1rem;
+}
+footer {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  padding: 0.7rem;
+  color: white;
+  background-color: rgb(51, 51, 51);
 }
