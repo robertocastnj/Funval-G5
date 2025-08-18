@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full w-full">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./output.css" />
+    <title>Document</title>
+  </head>
+  <body class="h-full w-full">
+    <header
+      class="h-[15%] bg-red-800 text-white flex justify-between items-center px-6 md:bg-blue-900 md:px-8 md:justify-between"
+    >
+      <div class="md:hidden"></div>
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1200px-International_Pok%C3%A9mon_logo.svg.png"
+        alt=""
+        class="h-[90%]"
+      />
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="size-8 md:hidden"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+        />
+      </svg>
+      <ul class="gap-8 text-2xl hidden md:flex">
+        <li>home</li>
+        <li>caracters</li>
+        <li>episodes</li>
+      </ul>
+    </header>
+    <main class="h-[75%] flex items-center justify-center p-4">
+      <aside
+        class="hidden md:flex bg-blue-900 w-[40%] h-full text-white items-center justify-center text-4xl"
+      >
+        aside
+      </aside>
+      <div
+        class="contenedor-cards p-8 gap-8 flex flex-col md:w-[60%] md:flex-row"
+      >
+        <div
+          class="card rounded-2xl flex bg-slate-800 text-white items-center justify-center p-4 md:flex-col-reverse gap-3"
+        >
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Consequuntur soluta, id quaerat enim unde porro reprehenderit omnis
+            labore praesentium dolorum consequatur perferendis, facilis esse?
+            Velit at hic voluptatibus animi magnam.
+          </p>
+          <img
+            src="https://cdn0.uncomo.com/es/posts/7/5/5/como_cuidar_de_un_cocker_spaniel_5557_600_square.jpg"
+            alt=""
+            class="size-32 rounded-full md:order-1"
+          />
+        </div>
+        <div
+          class="card flex rounded-2xl bg-slate-800 text-white items-center justify-center p-4 md:flex-col-reverse gap-3"
+        >
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Consequuntur soluta, id quaerat enim unde porro reprehenderit omnis
+            labore praesentium dolorum consequatur perferendis, facilis esse?
+            Velit at hic voluptatibus animi magnam.
+          </p>
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_y6WmdvK0pqf_2Ndkh4m9SwW0OHYLRGimtJ0sDQUp26LR4nwCHcoJSdkDrSZckxoAPg8&usqp=CAU"
+            alt=""
+            class="size-32 rounded-full md:order-1"
+          />
+        </div>
+      </div>
+    </main>
+    <footer class="bg-red-800 h-[10%] md:bg-blue-900">footer</footer>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body,
+html {
+  height: 100%;
+  width: 100%;
+}
+header {
+  height: 15%;
+  background-color: rgb(156, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  color: white;
+  gap: 230px;
+  padding: 10px;
+}
+main {
+  padding: 20px;
+  height: 75%;
+  background-color: rgb(222, 219, 219);
+}
+.container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 16px;
+}
+.card {
+  display: flex;
+  background-color: white;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+.pepito {
+  border: 1px black solid;
+  height: 80px;
+  border-radius: 8px;
+}
+footer {
+  height: 10%;
+  background-color: brown;
+}
+ul {
+  display: none;
+}
+aside {
+  display: none;
+}
+@media (min-width: 1024px) {
+  header {
+    justify-content: space-around;
+  }
+  .botoncito {
+    display: none;
+  }
+  ul {
+    display: flex;
+    list-style: none;
+    gap: 16px;
+  }
+  main {
+    display: flex;
+  }
+  aside {
+    display: block;
+    height: 100%;
+    width: 40%;
+    background-color: darkblue;
+  }
+  .container {
+    width: 60%;
+    flex-direction: row;
+  }
+  .card {
+    gap: 16px;
+    flex-direction: column-reverse;
+  }
+  /* .comentarios {
+    order: 2;
+  }
+  .pepito {
+    order: 1;
+  } */
+}
