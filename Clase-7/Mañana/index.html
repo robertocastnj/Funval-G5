@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full w-full">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="output.css" />
+    <title>Document</title>
+  </head>
+  <body
+    class="h-full w-full flex items-center justify-center flex-col bg-gray-600"
+  >
+    <!--   <div
+      class="relative w-96 h-96 rounded-2xl shadow-2xl transition-all duration-300"
+    >
+      <img
+        src="https://lumiere-a.akamaihd.net/v1/images/anakin_skywalker_004_a316c9cb.jpeg"
+        alt="Anakin"
+        class="absolute w-full h-full rounded-2xl object-cover opacity-100 hover:opacity-0"
+      />
+
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Anime_Friends_2016_%2828204286635%29_%28no_background%29.png/640px-Anime_Friends_2016_%2828204286635%29_%28no_background%29.png"
+        alt="Darth_vader"
+        class="absolute w-full h-full rounded-2xl object-cover opacity-0 hover:opacity-100 transition-opacity duration-500"
+      />
+    </div> -->
+
+    <div class="imagen">
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZp-_4N9tge0U5Il5YCJql4ou3MDCyjgZ6gw&s"
+        alt=""
+      />
+    </div>
+    <div class="titulo">Visitas de ministración</div>
+
+    <form
+      action=""
+      class="flex flex-col gap-4 bg-gray-500 text-white p-4 rounded-2xl"
+    >
+      <label for="">Apellido de familia</label>
+      <input
+        type="text"
+        placeholder="Hernández"
+        class="outline-none focus:ring-2 focus:ring-sky-500 focus:rounded-500 focus:text-sky-500"
+      />
+      <label for="">Estaca:</label>
+      <select name="" id="">
+        <option value="" class="bg-gray-600">Aguascalientes</option>
+        <option value="" class="bg-gray-600">San Luis</option>
+      </select>
+
+      <label for="">Integrantes de familia:</label>
+      <input
+        type="number"
+        class="outline-none focus:ring-2 focus:ring-sky-500 focus:rounded-500 focus:text-sky-500"
+      />
+      <div class="flex">
+        <div class="flex flex-col">
+          <label for="">Fecha disponible:</label>
+          <input
+            type="date"
+            name="fecha"
+            class="outline-none focus:ring-2 focus:ring-sky-500 focus:rounded-500 focus:text-sky-500"
+          />
+        </div>
+        <div class="flex flex-col">
+          <label for="">Hora disponible:</label>
+          <input
+            type="time"
+            name="hora"
+            class="outline-none focus:ring-2 focus:ring-sky-500 focus:rounded-500 focus:text-sky-500"
+          />
+        </div>
+      </div>
+      <label for="">E-mail:</label>
+      <input
+        type="email"
+        placeholder="tucorreo@example.com"
+        class="outline-none focus:ring-2 focus:ring-sky-500 focus:rounded-500 focus:text-sky-500 invalid:focus:ring-pink-700 invalid:focus:text-pink-700"
+      />
+      <button class="bg-sky-900">Enviar</button>
+    </form>
+  </body>
+</html>
