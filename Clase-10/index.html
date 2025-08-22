@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" class="w-full h-full">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="output.css" />
+    <title>Libreria</title>
+  </head>
+  <body class="w-full h-full flex flex-col gap-5">
+    <div class="bg-red-500 fixed bottom-2 right-2 z-50">Chat</div>
+    <!-- Header -->
+    <header
+      class="w-full bg-[#f7e924] flex flex-col items-center justify-between"
+    >
+      <!-- Movile version -->
+      <div
+        class="w-full h-full movile flex flex-row items-center justify-between p-2 sm:-[50%]"
+      >
+        <!-- Menu icon -->
+        <div class="md:hidden">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="#6b3091"
+            class="size-7"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+        </div>
+        <div class="Menu_real hidden bg-blue-200 md:block">
+          <!-- Real menu -->
+          <ul class="flex flex-row gap-3">
+            <li class="">Home</li>
+            <li>Descuentos</li>
+            <li>Novedades</li>
+            <li>Artículos</li>
+          </ul>
+        </div>
+        <!-- Logo -->
+        <div class="bg-blue-200">
+          <img src="logo.png" alt="" class="object-cover w-50" />
+        </div>
+        <!-- Search Market -->
+        <div class="">
+          <ul class="flex flex-row gap-3">
+            <li class="sm:hidden">
+              <button>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="#6b3091"
+                  class="size-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+                  />
+                </svg>
+              </button>
+            </li>
+            <li>
+              <button>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="#6b3091"
+                  class="size-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
+                  />
+                </svg>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="search_bar hidden w-full h-[50%] bg-white sm:block">
+        Search Bar
+      </div>
+    </header>
+
+    <!-- Hero Secction -->
+    <section class="bg-green-700 h-[30%] flex flex-row p-2">
+      <div class="w-[40%] bg-green-200 flex items-center justify-center">
+        Image
+      </div>
+      <p class="w-[60%] bg-green-500 flex items-center justify-center">
+        Description
+      </p>
+    </section>
+
+    <main class="w-full h-[40%] bg-orange-700 p-2 flex flex-col gap-4">
+      <section
+        class="bg-orange-300 h-[20%] p-2 w-full flex flex-row justify-center items-center"
+      >
+        Novedades
+      </section>
+      <div class="bg-orange-100 h-[10%]">Filtros</div>
+      <div
+        class="bg-orange-950 text-white w-full h-[80%] grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4"
+      >
+        <div>Card 1</div>
+        <div>Card 2</div>
+        <div>Card 3</div>
+        <div>Card 4</div>
+      </div>
+      <div class="bg-amber-100">Paginas siguientes</div>
+    </main>
+    <footer class="bg-pink-600 h-[20%] flex flex-col p-2 gap-2">
+      <div class="bg-pink-300">Formulario</div>
+      <div class="bg-pink-100 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4">
+        <div>Info 1</div>
+        <div>Info 2</div>
+        <div>Info 3</div>
+        <div class="sm:col-start-2 md:col-start-4">Info 4</div>
+      </div>
+      <div class="bg-pink-50">Contacto</div>
+    </footer>
+  </body>
+</html>
