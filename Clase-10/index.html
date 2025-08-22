@@ -18,20 +18,22 @@
       >
         <!-- Menu icon -->
         <div class="md:hidden">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="#6b3091"
-            class="size-7"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-            />
-          </svg>
+          <button class="flex items-center cursor-pointer">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="#6b3091"
+              class="size-7 hover:size-7.5 transition-all duration-200"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+          </button>
         </div>
         <div class="Menu_real hidden bg-blue-200 md:block">
           <!-- Real menu -->
@@ -43,21 +45,21 @@
           </ul>
         </div>
         <!-- Logo -->
-        <div class="bg-blue-200">
+        <div class="">
           <img src="logo.png" alt="" class="object-cover w-50" />
         </div>
         <!-- Search Market -->
         <div class="">
-          <ul class="flex flex-row gap-3">
+          <ul class="flex flex-row gap-4">
             <li class="sm:hidden">
-              <button>
+              <button class="flex items-center cursor-pointer">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="#6b3091"
-                  class="size-6"
+                  class="size-6 hover:size-7.5 transition-all duration-200"
                 >
                   <path
                     stroke-linecap="round"
@@ -68,14 +70,14 @@
               </button>
             </li>
             <li>
-              <button>
+              <button class="flex items-center cursor-pointer">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="#6b3091"
-                  class="size-6"
+                  class="size-6 hover:size-7.5 transition-all duration-200"
                 >
                   <path
                     stroke-linecap="round"
@@ -94,41 +96,354 @@
     </header>
 
     <!-- Hero Secction -->
-    <section class="bg-green-700 h-[30%] flex flex-row p-2">
-      <div class="w-[40%] bg-green-200 flex items-center justify-center">
-        Image
+    <section class="bg-[#575757] h-[30%] flex flex-row p-2">
+      <div class="w-[40%] flex items-center justify-center">
+        <img src="libros.png" alt="" />
       </div>
-      <p class="w-[60%] bg-green-500 flex items-center justify-center">
-        Description
-      </p>
+      <div class="w-[60%] flex flex-col items-center justify-center gap-10">
+        <p
+          class="text-4xl font-bold text-white rounded-2xl shadow-2xl text-left"
+        >
+          Libros de Física
+        </p>
+        <button
+          class="bg-[#672f90] text-white font-bold py-3 px-6 rounded-lg transition duration-300 cursor-pointer shadow hover:shadow-lg"
+        >
+          Comprar
+        </button>
+      </div>
     </section>
 
-    <main class="w-full h-[40%] bg-orange-700 p-2 flex flex-col gap-4">
+    <main class="w-full p-2 flex flex-col gap-4">
       <section
-        class="bg-orange-300 h-[20%] p-2 w-full flex flex-row justify-center items-center"
+        class="h-[20%] p-2 w-full flex flex-row justify-between items-center border-t-4 border-b-4 border-[#672f90]"
       >
-        Novedades
+        <p class="text-2xl rounded-2xl shadow-2xl text-left">
+          Los más vendidos
+        </p>
+        <p class="text-xl flex flex-row justify-center">
+          <a href="">Ver más </a>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m8.25 4.5 7.5 7.5-7.5 7.5"
+            />
+          </svg>
+        </p>
       </section>
       <div class="bg-orange-100 h-[10%]">Filtros</div>
+      <div class="w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+        <div class="flex flex-col justify-center items-center gap-2">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5RiZeDQaRqihQybnTQacDiB0Eh4nEtSrXIA&s"
+            alt=""
+            class="h-40"
+          />
+          <p class="text-center text-2xs font-bold">
+            Fundamentos de matemáticas
+          </p>
+          <p class="text-center text-xs">Juan Vera</p>
+          <div class="flex flex-row">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25"
+              />
+            </svg>
+            <p class="text-2xs">Tapa blanda</p>
+          </div>
+          <button
+            class="bg-green-700 text-white text-xs py-3 px-6 rounded-lg transition duration-300 cursor-pointer shadow hover:shadow-lg"
+          >
+            Añadir al carrito
+          </button>
+        </div>
+        <div class="flex flex-col justify-center items-center gap-2">
+          <img
+            src="data:image/jpeg;base64,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"
+            alt=""
+            class="h-40"
+          />
+          <p class="text-center text-2xs font-bold">
+            Fundamentos de matemáticas
+          </p>
+          <p class="text-center text-xs">Juan Vera</p>
+          <div class="flex flex-row">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25"
+              />
+            </svg>
+            <p class="text-2xs">Tapa blanda</p>
+          </div>
+          <button
+            class="bg-green-700 text-white text-xs py-3 px-6 rounded-lg transition duration-300 cursor-pointer shadow hover:shadow-lg"
+          >
+            Añadir al carrito
+          </button>
+        </div>
+        <div class="flex flex-col justify-center items-center gap-2">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRz1BP9J_0HamgmRsDYzrNUMpGuOohPQZDBA&s"
+            alt=""
+            class="h-40"
+          />
+          <p class="text-center text-2xs font-bold">
+            Fundamentos de matemáticas
+          </p>
+          <p class="text-center text-xs">Juan Vera</p>
+          <div class="flex flex-row">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25"
+              />
+            </svg>
+            <p class="text-2xs">Tapa blanda</p>
+          </div>
+          <button
+            class="bg-green-700 text-white text-xs py-3 px-6 rounded-lg transition duration-300 cursor-pointer shadow hover:shadow-lg"
+          >
+            Añadir al carrito
+          </button>
+        </div>
+        <div class="flex flex-col justify-center items-center gap-2">
+          <img
+            src="https://gandhi.vtexassets.com/arquivos/ids/1870579/46000eab-1e43-4887-a728-4e77c545fb19.jpg?v=638342098513570000"
+            alt=""
+            class="h-40"
+          />
+          <p class="text-center text-2xs font-bold">
+            Fundamentos de matemáticas
+          </p>
+          <p class="text-center text-xs">Juan Vera</p>
+          <div class="flex flex-row">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25"
+              />
+            </svg>
+            <p class="text-2xs">Tapa blanda</p>
+          </div>
+          <button
+            class="bg-green-700 text-white text-xs py-3 px-6 rounded-lg transition duration-300 cursor-pointer shadow hover:shadow-lg"
+          >
+            Añadir al carrito
+          </button>
+        </div>
+      </div>
       <div
-        class="bg-orange-950 text-white w-full h-[80%] grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4"
+        class="flex flex-row items-center justify-center gap-8 border-t-4 border-b-4 border-[#672f90]"
       >
-        <div>Card 1</div>
-        <div>Card 2</div>
-        <div>Card 3</div>
-        <div>Card 4</div>
+        <p class="text-xs"><a href="">Página anterior</a></p>
+        <div class="flex flex-row gap-2">
+          <p class="text-xs"><a href="">1</a></p>
+          <p class="text-xs"><a href="">2</a></p>
+          <p class="text-xs"><a href="">3</a></p>
+          <p class="text-xs"><a href="">4</a></p>
+          <p class="text-xs"><a href="">5</a></p>
+          <p class="text-xs">...</p>
+        </div>
+        <p class="text-xs"><a href="">Página siguiente</a></p>
       </div>
-      <div class="bg-amber-100">Paginas siguientes</div>
     </main>
-    <footer class="bg-pink-600 h-[20%] flex flex-col p-2 gap-2">
-      <div class="bg-pink-300">Formulario</div>
-      <div class="bg-pink-100 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4">
-        <div>Info 1</div>
-        <div>Info 2</div>
-        <div>Info 3</div>
-        <div class="sm:col-start-2 md:col-start-4">Info 4</div>
+    <footer class="bg-[#672f90] flex flex-col gap-2">
+      <div class="bg-[#a86eab] flex flex-col items-center justify-center gap-2">
+        <p class="text-2xl text-white font-bold">Boletín de Novedades</p>
+        <p class="text-2xs text-white">
+          Suscribete y estarás al tanto de nuestras novedades
+        </p>
+        <form action="">
+          <input type="email " class="bg-white rounded-2xl p-2 mb-2" />
+          <button
+            class="bg-[#672f90] text-white py-1 px-3 rounded-lg transition duration-300 cursor-pointer shadow hover:shadow-lg"
+          >
+            Suscribir
+          </button>
+        </form>
       </div>
-      <div class="bg-pink-50">Contacto</div>
+      <div
+        class="bg-[#672f90] text-white grid grid-cols-2 gap-6 p-4 sm:grid-cols-3 md:grid-cols-4"
+      >
+        <div class="flex flex-col justify-center items-center">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
+            />
+          </svg>
+
+          <p class="font-bold">Servicio al cliente</p>
+          <ul>
+            <li class="text-xs"><a href="">Mis pedidos</a></li>
+            <li class="text-xs"><a href="">Favoritos</a></li>
+            <li class="text-xs"><a href="">Direcciones</a></li>
+          </ul>
+        </div>
+        <div class="flex flex-col justify-center items-center">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M12 20.25c4.97 0 9-3.694 9-8.25s-4.03-8.25-9-8.25S3 7.444 3 12c0 2.104.859 4.023 2.273 5.48.432.447.74 1.04.586 1.641a4.483 4.483 0 0 1-.923 1.785A5.969 5.969 0 0 0 6 21c1.282 0 2.47-.402 3.445-1.087.81.22 1.668.337 2.555.337Z"
+            />
+          </svg>
+
+          <p class="font-bold">Servicio al cliente</p>
+          <ul>
+            <li class="text-xs"><a href="">Mis pedidos</a></li>
+            <li class="text-xs"><a href="">Favoritos</a></li>
+            <li class="text-xs"><a href="">Direcciones</a></li>
+          </ul>
+        </div>
+        <div class="flex flex-col justify-center items-center">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
+            />
+          </svg>
+
+          <p class="font-bold">Servicio al cliente</p>
+          <ul>
+            <li class="text-xs"><a href="">Mis pedidos</a></li>
+            <li class="text-xs"><a href="">Favoritos</a></li>
+            <li class="text-xs"><a href="">Direcciones</a></li>
+          </ul>
+        </div>
+        <div class="flex flex-col justify-center items-center">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z"
+            />
+          </svg>
+
+          <p class="font-bold">Servicio al cliente</p>
+          <ul>
+            <li class="text-xs"><a href="">Mis pedidos</a></li>
+            <li class="text-xs"><a href="">Favoritos</a></li>
+            <li class="text-xs"><a href="">Direcciones</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="sm:col-start-2 md:col-start-4"></div>
+      <div
+        class="flex flex-row justify-center items-center mb-4 gap-8 border-t-2 border-black"
+      >
+        <a href="" class="">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            x="0px"
+            y="0px"
+            width="50"
+            viewBox="0 0 50 50"
+          >
+            <path
+              d="M 9 4 C 6.2504839 4 4 6.2504839 4 9 L 4 41 C 4 43.749516 6.2504839 46 9 46 L 25.832031 46 A 1.0001 1.0001 0 0 0 26.158203 46 L 31.832031 46 A 1.0001 1.0001 0 0 0 32.158203 46 L 41 46 C 43.749516 46 46 43.749516 46 41 L 46 9 C 46 6.2504839 43.749516 4 41 4 L 9 4 z M 9 6 L 41 6 C 42.668484 6 44 7.3315161 44 9 L 44 41 C 44 42.668484 42.668484 44 41 44 L 33 44 L 33 30 L 36.820312 30 L 38.220703 23 L 33 23 L 33 21 C 33 20.442508 33.05305 20.398929 33.240234 20.277344 C 33.427419 20.155758 34.005822 20 35 20 L 38 20 L 38 14.369141 L 37.429688 14.097656 C 37.429688 14.097656 35.132647 13 32 13 C 29.75 13 27.901588 13.896453 26.71875 15.375 C 25.535912 16.853547 25 18.833333 25 21 L 25 23 L 22 23 L 22 30 L 25 30 L 25 44 L 9 44 C 7.3315161 44 6 42.668484 6 41 L 6 9 C 6 7.3315161 7.3315161 6 9 6 z M 32 15 C 34.079062 15 35.38736 15.458455 36 15.701172 L 36 18 L 35 18 C 33.849178 18 32.926956 18.0952 32.150391 18.599609 C 31.373826 19.104024 31 20.061492 31 21 L 31 25 L 35.779297 25 L 35.179688 28 L 31 28 L 31 44 L 27 44 L 27 28 L 24 28 L 24 25 L 27 25 L 27 21 C 27 19.166667 27.464088 17.646453 28.28125 16.625 C 29.098412 15.603547 30.25 15 32 15 z"
+            ></path>
+          </svg>
+        </a>
+        <a href="">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            x="0px"
+            y="0px"
+            width="50"
+            viewBox="0 0 50 50"
+          >
+            <path
+              d="M 16 3 C 8.8324839 3 3 8.8324839 3 16 L 3 34 C 3 41.167516 8.8324839 47 16 47 L 34 47 C 41.167516 47 47 41.167516 47 34 L 47 16 C 47 8.8324839 41.167516 3 34 3 L 16 3 z M 16 5 L 34 5 C 40.086484 5 45 9.9135161 45 16 L 45 34 C 45 40.086484 40.086484 45 34 45 L 16 45 C 9.9135161 45 5 40.086484 5 34 L 5 16 C 5 9.9135161 9.9135161 5 16 5 z M 37 11 A 2 2 0 0 0 35 13 A 2 2 0 0 0 37 15 A 2 2 0 0 0 39 13 A 2 2 0 0 0 37 11 z M 25 14 C 18.936712 14 14 18.936712 14 25 C 14 31.063288 18.936712 36 25 36 C 31.063288 36 36 31.063288 36 25 C 36 18.936712 31.063288 14 25 14 z M 25 16 C 29.982407 16 34 20.017593 34 25 C 34 29.982407 29.982407 34 25 34 C 20.017593 34 16 29.982407 16 25 C 16 20.017593 20.017593 16 25 16 z"
+            ></path>
+          </svg>
+        </a>
+        <a href="">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            x="0px"
+            y="0px"
+            width="50"
+            viewBox="0 0 50 50"
+          >
+            <path
+              d="M 11 4 C 7.1456661 4 4 7.1456661 4 11 L 4 39 C 4 42.854334 7.1456661 46 11 46 L 39 46 C 42.854334 46 46 42.854334 46 39 L 46 11 C 46 7.1456661 42.854334 4 39 4 L 11 4 z M 11 6 L 39 6 C 41.773666 6 44 8.2263339 44 11 L 44 39 C 44 41.773666 41.773666 44 39 44 L 11 44 C 8.2263339 44 6 41.773666 6 39 L 6 11 C 6 8.2263339 8.2263339 6 11 6 z M 13.085938 13 L 22.308594 26.103516 L 13 37 L 15.5 37 L 23.4375 27.707031 L 29.976562 37 L 37.914062 37 L 27.789062 22.613281 L 36 13 L 33.5 13 L 26.660156 21.009766 L 21.023438 13 L 13.085938 13 z M 16.914062 15 L 19.978516 15 L 34.085938 35 L 31.021484 35 L 16.914062 15 z"
+            ></path>
+          </svg>
+        </a>
+      </div>
     </footer>
   </body>
 </html>

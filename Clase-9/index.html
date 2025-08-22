@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" id="todo">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./output.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chewy&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body class="flex flex-col gap-2 dark:bg-slate-700 dark:text-white p-8">
+    <header
+      class="h-20 bg-orange-400 flex items-center justify-between sm:bg-cyan-500 dark:bg-slate-900 dark:text-white gap-8 px-10"
+    >
+      <ul
+        class="flex gap-4 text-2xl h-[80%] text-red-600 text-shadow-2xs text-shadow-black"
+        style="font-family: Chewy, system-ui"
+      >
+        <li
+          class="hover:bg-yellow-500 hover:scale-110 h-full flex items-center justify-center rounded-2xl cursor-pointer px-4"
+        >
+          Home
+        </li>
+        <li
+          class="hover:bg-yellow-500 hover:scale-110 h-full flex items-center justify-center rounded-2xl cursor-pointer px-4"
+        >
+          Personajes
+        </li>
+        <li
+          class="hover:bg-yellow-500 hover:scale-110 h-full flex items-center justify-center rounded-2xl cursor-pointer px-4"
+        >
+          Episodios
+        </li>
+        <li
+          class="hover:bg-yellow-500 hover:scale-110 h-full flex items-center justify-center rounded-2xl cursor-pointer px-4"
+        >
+          videjuegos
+        </li>
+      </ul>
+      <img
+        src="./img/logo_simp-removebg-preview.png"
+        alt=""
+        class="h-[80%] animate-bounce"
+      />
+      <div
+        class="w-48 aspect-video rounded-xl has-[:checked]:bg-[#3a3347] bg-[#ebe6ef] border-4 border-[#121331] object-cover h-[90%]"
+      >
+        <div class="flex h-full w-full px-2 items-center gap-x-2">
+          <div
+            class="w-6 h-6 flex-shrink-0 rounded-full border-4 border-[#121331]"
+          ></div>
+          <label
+            for="switch"
+            class="has-[:checked]:scale-x-[-1] w-full h-10 border-4 border-[#121331] rounded cursor-pointer"
+          >
+            <input type="checkbox" id="switch" class="hidden" />
+            <div class="w-full h-full bg-[#f24c00] relative">
+              <div
+                class="w-0 h-0 z-20 border-l-[24px] border-l-transparent border-r-[24px] border-r-transparent border-t-[20px] border-t-[#121331] relative"
+              >
+                <div
+                  class="w-0 h-0 absolute border-l-[18px] border-l-transparent border-r-[18px] border-r-transparent border-t-[15px] border-t-[#e44901] -top-5 -left-[18px]"
+                ></div>
+              </div>
+              <div
+                class="w-[24px] h-9 z-10 absolute top-[9px] left-0 bg-[#f24c00] border-r-2 border-b-4 border-[#121331] transform skew-y-[39deg]"
+              ></div>
+              <div
+                class="w-[25px] h-9 z-10 absolute top-[9px] left-[24px] bg-[#c44002] border-r-4 border-l-2 border-b-4 border-[#121331] transform skew-y-[-39deg]"
+              ></div>
+            </div>
+          </label>
+          <div class="w-6 h-1 flex-shrink-0 bg-[#121331] rounded-full"></div>
+        </div>
+      </div>
+    </header>
+    <main
+      class="grid items-center justify-center gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 md:grid-rows-2 md:h-120"
+    >
+      <div
+        class="h-60 bg-red-500 w-full md:row-span-2 md:h-full dark:bg-slate-900"
+      >
+        1
+      </div>
+      <div
+        class="h-60 bg-cyan-700 w-full sm:bg-red-500 md:h-full md:row-span-2 dark:bg-slate-900"
+      >
+        2
+      </div>
+      <div
+        class="h-60 bg-red-500 w-full sm:col-span-2 sm:bg-green-600 md:col-span-1 md:row-span-2 md:h-full dark:bg-slate-900"
+      >
+        3
+      </div>
+    </main>
+    <footer class="flex gap-4 flex-col md:flex-row">
+      <div class="bg-yellow-400 h-20 md:w-[50%] dark:bg-slate-900">footer1</div>
+      <div class="bg-yellow-400 h-20 md:w-[50%] dark:bg-slate-900">footer2</div>
+    </footer>
+
+    <script>
+      let todo = document.querySelector("#todo");
+      let botoncito = document.querySelector("#switch");
+      botoncito.addEventListener("click", function () {
+        todo.classList.toggle("dark");
+      });
+    </script>
+  </body>
+</html>
