@@ -35,21 +35,29 @@
             </svg>
           </button>
         </div>
-        <div class="Menu_real hidden bg-blue-200 md:block">
+        <div class="Menu_real hidden md:block md:w-[33%]">
           <!-- Real menu -->
           <ul class="flex flex-row gap-3">
-            <li class="">Home</li>
-            <li>Descuentos</li>
-            <li>Novedades</li>
-            <li>Artículos</li>
+            <li class="text-[0.8rem] font-bold text-[#672f90]">
+              <a href="">Home</a>
+            </li>
+            <li class="text-[0.8rem] font-bold text-[#672f90]">
+              <a href="">Descuentos</a>
+            </li>
+            <li class="text-[0.8rem] font-bold text-[#672f90]">
+              <a href="">Novedades</a>
+            </li>
+            <li class="text-[0.8rem] font-bold text-[#672f90]">
+              <a href="">Artículos</a>
+            </li>
           </ul>
         </div>
         <!-- Logo -->
-        <div class="">
+        <div class="md:w-[34%] flex flex-row justify-center items-center">
           <img src="logo.png" alt="" class="object-cover w-50" />
         </div>
         <!-- Search Market -->
-        <div class="">
+        <div class="md:w-[33%] flex flex-row justify-end pr-5">
           <ul class="flex flex-row gap-4">
             <li class="sm:hidden">
               <button class="flex items-center cursor-pointer">
@@ -90,15 +98,35 @@
           </ul>
         </div>
       </div>
-      <div class="search_bar hidden w-full h-[50%] bg-white sm:block">
-        Search Bar
+      <div
+        class="search_bar hidden w-full h-[50%] sm:block sm:flex flex-row items-center justify-center p-4"
+      >
+        <div class="bg-white flex flex-row items-center justify-center">
+          <input type="text" class="bg-white p-1" />
+          <button class="flex items-center cursor-pointer">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="#6b3091"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+              />
+            </svg>
+          </button>
+        </div>
       </div>
     </header>
 
     <!-- Hero Secction -->
     <section class="bg-[#575757] h-[30%] flex flex-row p-2">
       <div class="w-[40%] flex items-center justify-center">
-        <img src="libros.png" alt="" />
+        <img src="libros.png" alt="" class="h-[100%] object-cover" />
       </div>
       <div class="w-[60%] flex flex-col items-center justify-center gap-10">
         <p
@@ -277,16 +305,15 @@
       <div
         class="flex flex-row items-center justify-center gap-8 border-t-4 border-b-4 border-[#672f90]"
       >
-        <p class="text-xs"><a href="">Página anterior</a></p>
+        <p class="text-xs sm:text-xl"><a href="">Página anterior</a></p>
         <div class="flex flex-row gap-2">
-          <p class="text-xs"><a href="">1</a></p>
-          <p class="text-xs"><a href="">2</a></p>
-          <p class="text-xs"><a href="">3</a></p>
-          <p class="text-xs"><a href="">4</a></p>
-          <p class="text-xs"><a href="">5</a></p>
-          <p class="text-xs">...</p>
+          <p class="text-xs sm:text-xl"><a href="">1</a></p>
+          <p class="text-xs sm:text-xl"><a href="">2</a></p>
+          <p class="text-xs sm:text-xl"><a href="">3</a></p>
+          <p class="text-xs sm:text-xl"><a href="">4</a></p>
+          <p class="text-xs sm:text-xl"><a href="">5 ...</a></p>
         </div>
-        <p class="text-xs"><a href="">Página siguiente</a></p>
+        <p class="text-xs sm:text-xl"><a href="">Página siguiente</a></p>
       </div>
     </main>
     <footer class="bg-[#672f90] flex flex-col gap-2">
@@ -305,7 +332,7 @@
         </form>
       </div>
       <div
-        class="bg-[#672f90] text-white grid grid-cols-2 gap-6 p-4 sm:grid-cols-3 md:grid-cols-4"
+        class="bg-[#672f90] w-full text-white grid grid-cols-2 gap-6 p-4 sm:grid-cols-3 md:grid-cols-4"
       >
         <div class="flex flex-col justify-center items-center">
           <svg
@@ -376,7 +403,9 @@
             <li class="text-xs"><a href="">Direcciones</a></li>
           </ul>
         </div>
-        <div class="flex flex-col justify-center items-center">
+        <div
+          class="flex flex-col justify-center items-center sm:col-start-2 md:col-start-4"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -402,7 +431,7 @@
       </div>
       <div class="sm:col-start-2 md:col-start-4"></div>
       <div
-        class="flex flex-row justify-center items-center mb-4 gap-8 border-t-2 border-black"
+        class="flex flex-row justify-center items-center mb-4 p-4 gap-8 border-t-2 border-black"
       >
         <a href="" class="">
           <svg
