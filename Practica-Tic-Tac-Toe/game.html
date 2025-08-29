@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full w-full">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="output.css" />
+    <title>Tic Tac Toe</title>
+  </head>
+  <body
+    class="h-full w-full flex flex-col items-center justify-center bg-[#1a2b33]"
+  >
+    <div class="w-[21rem] h-[150rem] flex flex-col gap-13">
+      <!-- Head section -->
+      <div class="h-[2.5rem] w-full flex flex-row justify-between mt-10">
+        <!-- Icons -->
+        <div class="h-full flex flex-row p-1 gap-1.5">
+          <!-- X-mark -->
+          <div class="h-full">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 8 8"
+              class="object-cover h-full"
+            >
+              <path
+                fill="#33c3be"
+                d="M1.41 0L0 1.41l.72.72L2.5 3.94L.72 5.72L0 6.41l1.41 1.44l.72-.72l1.81-1.81l1.78 1.81l.69.72l1.44-1.44l-.72-.69l-1.81-1.78l1.81-1.81l.72-.72L6.41 0l-.69.72L3.94 2.5L2.13.72L1.41 0z"
+              />
+            </svg>
+          </div>
+          <!-- Cicrlce -->
+          <div class="h-full">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 16 16"
+              class="object-cover h-full"
+            >
+              <path
+                fill="#d1b065"
+                d="M8 2a6 6 0 1 0 0 12A6 6 0 0 0 8 2M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8"
+              />
+            </svg>
+          </div>
+        </div>
+        <!-- Turn section -->
+        <div
+          class="bg-[#0f212b] w-[6rem] h-[2.5rem] rounded-sm flex justify-center"
+        >
+          <button
+            class="w-[6rem] h-[2.3rem] rounded-sm flex gap-2 justify-center items-center bg-[#1f3540]"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 8 8"
+              class="object-cover h-[1.1rem]"
+            >
+              <path
+                fill="#a7bdc8"
+                d="M1.41 0L0 1.41l.72.72L2.5 3.94L.72 5.72L0 6.41l1.41 1.44l.72-.72l1.81-1.81l1.78 1.81l.69.72l1.44-1.44l-.72-.69l-1.81-1.78l1.81-1.81l.72-.72L6.41 0l-.69.72L3.94 2.5L2.13.72L1.41 0z"
+              />
+            </svg>
+            <p class="text-[1rem] font-bold text-[#a7bdc8]">TURN</p>
+          </button>
+        </div>
+        <!-- go back section -->
+        <div
+          class="h-[2.5rem] w-[2.5rem] rounded-sm bg-[#6c8997] flex justify-center"
+        >
+          <button
+            class="h-[2.3rem] w-[2.5rem] rounded-sm bg-[#a8bec9] flex justify-center items-center"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="1.5rem"
+              viewBox="-1 -2 24 24"
+            >
+              <path
+                fill="#3f5560"
+                d="m19.347 7.24l.847-1.266a.984.984 0 0 1 1.375-.259c.456.31.58.93.277 1.383L19.65 10.38a.984.984 0 0 1-1.375.259L14.97 8.393a1.002 1.002 0 0 1-.277-1.382a.984.984 0 0 1 1.375-.26l1.344.915C16.428 4.386 13.42 2 9.863 2c-4.357 0-7.89 3.582-7.89 8s3.533 8 7.89 8c.545 0 .987.448.987 1s-.442 1-.987 1C4.416 20 0 15.523 0 10S4.416 0 9.863 0c4.504 0 8.302 3.06 9.484 7.24z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <!-- Game section -->
+      <div class="grid grid-cols-3 gap-6 p-6">
+        <!-- Empty button -->
+        <div
+          class="bg-[#102129] rounded-sm h-[5.4rem] w-[5.5rem] flex justify-center"
+        >
+          <button class="bg-[#1f3540] rounded-sm h-[5rem] w-[6rem]"></button>
+        </div>
+        <!-- x button -->
+        <div
+          class="bg-[#102129] rounded-sm h-[5.4rem] w-[5.5rem] flex justify-center"
+        >
+          <button class="bg-[#1f3540] rounded-sm h-[5rem] w-[6rem]">
+            <!-- X-mark -->
+            <div class="h-full flex items-center justify-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 8 8"
+                class="object-cover h-[60%]"
+              >
+                <path
+                  fill="#33c3be"
+                  d="M1.41 0L0 1.41l.72.72L2.5 3.94L.72 5.72L0 6.41l1.41 1.44l.72-.72l1.81-1.81l1.78 1.81l.69.72l1.44-1.44l-.72-.69l-1.81-1.78l1.81-1.81l.72-.72L6.41 0l-.69.72L3.94 2.5L2.13.72L1.41 0z"
+                />
+              </svg>
+            </div>
+          </button>
+        </div>
+        <!-- Circle button -->
+        <div
+          class="bg-[#102129] rounded-sm h-[5.4rem] w-[5.5rem] flex justify-center"
+        >
+          <button class="bg-[#1f3540] rounded-sm h-[5rem] w-[6rem]">
+            <!-- Cicrlce -->
+            <div class="h-full flex items-center justify-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 16 16"
+                class="object-cover h-[60%]"
+              >
+                <path
+                  fill="#d1b065"
+                  d="M8 2a6 6 0 1 0 0 12A6 6 0 0 0 8 2M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8"
+                />
+              </svg>
+            </div>
+          </button>
+        </div>
+        <!-- x button -->
+        <div
+          class="bg-[#102129] rounded-sm h-[5.4rem] w-[5.5rem] flex justify-center"
+        >
+          <button class="bg-[#1f3540] rounded-sm h-[5rem] w-[6rem]">
+            <!-- X-mark -->
+            <div class="h-full flex items-center justify-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 8 8"
+                class="object-cover h-[60%]"
+              >
+                <path
+                  fill="#33c3be"
+                  d="M1.41 0L0 1.41l.72.72L2.5 3.94L.72 5.72L0 6.41l1.41 1.44l.72-.72l1.81-1.81l1.78 1.81l.69.72l1.44-1.44l-.72-.69l-1.81-1.78l1.81-1.81l.72-.72L6.41 0l-.69.72L3.94 2.5L2.13.72L1.41 0z"
+                />
+              </svg>
+            </div>
+          </button>
+        </div>
+        <!-- Circle button -->
+        <div
+          class="bg-[#102129] rounded-sm h-[5.4rem] w-[5.5rem] flex justify-center"
+        >
+          <button class="bg-[#1f3540] rounded-sm h-[5rem] w-[6rem]">
+            <!-- Cicrlce -->
+            <div class="h-full flex items-center justify-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 16 16"
+                class="object-cover h-[60%]"
+              >
+                <path
+                  fill="#d1b065"
+                  d="M8 2a6 6 0 1 0 0 12A6 6 0 0 0 8 2M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8"
+                />
+              </svg>
+            </div>
+          </button>
+        </div>
+        <!-- x button -->
+        <div
+          class="bg-[#102129] rounded-sm h-[5.4rem] w-[5.5rem] flex justify-center"
+        >
+          <button class="bg-[#1f3540] rounded-sm h-[5rem] w-[6rem]">
+            <!-- X-mark -->
+            <div class="h-full flex items-center justify-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 8 8"
+                class="object-cover h-[60%]"
+              >
+                <path
+                  fill="#33c3be"
+                  d="M1.41 0L0 1.41l.72.72L2.5 3.94L.72 5.72L0 6.41l1.41 1.44l.72-.72l1.81-1.81l1.78 1.81l.69.72l1.44-1.44l-.72-.69l-1.81-1.78l1.81-1.81l.72-.72L6.41 0l-.69.72L3.94 2.5L2.13.72L1.41 0z"
+                />
+              </svg>
+            </div>
+          </button>
+        </div>
+        <!-- Empty button -->
+        <div
+          class="bg-[#102129] rounded-sm h-[5.4rem] w-[5.5rem] flex justify-center"
+        >
+          <button class="bg-[#1f3540] rounded-sm h-[5rem] w-[6rem]"></button>
+        </div>
+        <!-- Circle button -->
+        <div
+          class="bg-[#102129] rounded-sm h-[5.4rem] w-[5.5rem] flex justify-center"
+        >
+          <button class="bg-[#1f3540] rounded-sm h-[5rem] w-[6rem]">
+            <!-- Cicrlce -->
+            <div class="h-full flex items-center justify-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 16 16"
+                class="object-cover h-[60%]"
+              >
+                <path
+                  fill="#d1b065"
+                  d="M8 2a6 6 0 1 0 0 12A6 6 0 0 0 8 2M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8"
+                />
+              </svg>
+            </div>
+          </button>
+        </div>
+        <!-- x button -->
+        <div
+          class="bg-[#102129] rounded-sm h-[5.4rem] w-[5.5rem] flex justify-center"
+        >
+          <button class="bg-[#1f3540] rounded-sm h-[5rem] w-[6rem]">
+            <!-- X-mark -->
+            <div class="h-full flex items-center justify-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 8 8"
+                class="object-cover h-[60%]"
+              >
+                <path
+                  fill="#33c3be"
+                  d="M1.41 0L0 1.41l.72.72L2.5 3.94L.72 5.72L0 6.41l1.41 1.44l.72-.72l1.81-1.81l1.78 1.81l.69.72l1.44-1.44l-.72-.69l-1.81-1.78l1.81-1.81l.72-.72L6.41 0l-.69.72L3.94 2.5L2.13.72L1.41 0z"
+                />
+              </svg>
+            </div>
+          </button>
+        </div>
+      </div>
+      <!-- Data section -->
+      <div class="grid grid-cols-3 gap-6 bg-amber-800">
+        <div class="flex items-center justify-center">
+          <button class="bg-amber-50 h-[3rem] w-[4rem] m-2"></button>
+        </div>
+        <div class="flex items-center justify-center">
+          <button class="bg-amber-50 h-[3rem] w-[4rem] m-2"></button>
+        </div>
+        <div class="flex items-center justify-center">
+          <button class="bg-amber-50 h-[3rem] w-[4rem] m-2"></button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
