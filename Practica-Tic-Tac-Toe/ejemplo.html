@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Radio Buttons con Imágenes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      .custom-radio input[type="radio"] {
+        position: absolute;
+        opacity: 0;
+      }
+      .custom-radio img {
+        transition: all 0.3s ease;
+      }
+      .custom-radio input[type="radio"]:checked + div {
+        border-color: #3b82f6;
+        background-color: #eff6ff;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+          0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      }
+      .custom-radio input[type="radio"]:focus + div {
+        outline: 2px solid #3b82f6;
+        outline-offset: 2px;
+      }
+      .selected-indicator {
+        display: none;
+      }
+      input[type="radio"]:checked + div .selected-indicator {
+        display: flex;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen flex items-center justify-center p-6"
+  >
+    <div class="bg-white p-8 rounded-2xl shadow-xl max-w-3xl w-full">
+      <h1 class="text-3xl font-bold text-gray-800 mb-2 text-center">
+        Selecciona tu método de pago
+      </h1>
+      <p class="text-gray-600 mb-8 text-center">
+        Haz clic en cualquier opción y verás el valor seleccionado en la consola
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+        <!-- Opción 1: Tarjeta de crédito -->
+        <label class="custom-radio cursor-pointer">
+          <input
+            type="radio"
+            name="payment-method"
+            class="hidden"
+            value="credit-card"
+          />
+          <div
+            class="border-2 border-gray-200 rounded-xl p-4 flex flex-col items-center transition-all hover:border-blue-400 h-full"
+          >
+            <div
+              class="selected-indicator absolute top-2 right-2 bg-blue-500 text-white rounded-full w-6 h-6 items-center justify-center"
+            >
+              <i class="fas fa-check text-xs"></i>
+            </div>
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/179/179431.png"
+              alt="Tarjeta de crédito"
+              class="h-16 w-16 mb-3 object-contain"
+            />
+            <span class="text-lg font-medium text-gray-700"
+              >Tarjeta de Crédito</span
+            >
+            <span class="text-sm text-gray-500 mt-1">Pago seguro</span>
+          </div>
+        </label>
+
+        <!-- Opción 2: PayPal -->
+        <label class="custom-radio cursor-pointer">
+          <input
+            type="radio"
+            name="payment-method"
+            class="hidden"
+            value="paypal"
+          />
+          <div
+            class="border-2 border-gray-200 rounded-xl p-4 flex flex-col items-center transition-all hover:border-blue-400 h-full"
+          >
+            <div
+              class="selected-indicator absolute top-2 right-2 bg-blue-500 text-white rounded-full w-6 h-6 items-center justify-center"
+            >
+              <i class="fas fa-check text-xs"></i>
+            </div>
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/888/888871.png"
+              alt="PayPal"
+              class="h-16 w-16 mb-3 object-contain"
+            />
+            <span class="text-lg font-medium text-gray-700">PayPal</span>
+            <span class="text-sm text-gray-500 mt-1">Rápido y fácil</span>
+          </div>
+        </label>
+
+        <!-- Opción 3: Transferencia bancaria -->
+        <label class="custom-radio cursor-pointer">
+          <input
+            type="radio"
+            name="payment-method"
+            class="hidden"
+            value="bank-transfer"
+          />
+          <div
+            class="border-2 border-gray-200 rounded-xl p-4 flex flex-col items-center transition-all hover:border-blue-400 h-full"
+          >
+            <div
+              class="selected-indicator absolute top-2 right-2 bg-blue-500 text-white rounded-full w-6 h-6 items-center justify-center"
+            >
+              <i class="fas fa-check text-xs"></i>
+            </div>
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/1001/1001376.png"
+              alt="Transferencia bancaria"
+              class="h-16 w-16 mb-3 object-contain"
+            />
+            <span class="text-lg font-medium text-gray-700">Transferencia</span>
+            <span class="text-sm text-gray-500 mt-1">Directo a tu banco</span>
+          </div>
+        </label>
+      </div>
+
+      <div class="bg-blue-50 p-4 rounded-lg border border-blue-200">
+        <h2 class="text-lg font-semibold text-blue-800 mb-2">
+          <i class="fas fa-info-circle mr-2"></i>Información de la selección
+        </h2>
+        <p class="text-blue-700">
+          Selecciona una opción y abre la consola del navegador (F12) para ver
+          el valor seleccionado.
+        </p>
+        <div class="mt-3 p-3 bg-blue-100 rounded">
+          <p class="text-blue-800 font-mono">
+            El valor se mostrará como: "Método seleccionado: [valor]"
+          </p>
+        </div>
+      </div>
+
+      <div class="mt-6 text-center text-gray-500 text-sm">
+        <p>
+          Este ejemplo usa Tailwind CSS para los estilos y Font Awesome para los
+          iconos
+        </p>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Añadir funcionalidad para cambiar estilos al seleccionar y mostrar en consola
+        const radioInputs = document.querySelectorAll('input[type="radio"]');
+
+        radioInputs.forEach((input) => {
+          // Configurar evento change para cada radio button
+          input.addEventListener("change", function () {
+            // Remover estilos de selección de todos los contenedores
+            document
+              .querySelectorAll(".custom-radio > div")
+              .forEach((container) => {
+                container.classList.remove("border-blue-500", "bg-blue-50");
+                container.classList.add("border-gray-200");
+              });
+
+            // Añadir estilos de selección al contenedor del input seleccionado
+            if (this.checked) {
+              this.parentNode
+                .querySelector("div")
+                .classList.add("border-blue-500", "bg-blue-50");
+              this.parentNode
+                .querySelector("div")
+                .classList.remove("border-gray-200");
+
+              // Mostrar el valor seleccionado en la consola
+              console.log("Método seleccionado:", this.value);
+            }
+          });
+        });
+
+        // También detectar clics en las etiquetas para una respuesta más inmediata
+        document.querySelectorAll(".custom-radio").forEach((radio) => {
+          radio.addEventListener("click", function () {
+            const input = this.querySelector('input[type="radio"]');
+            // Pequeño retraso para que se registre el cambio primero
+            setTimeout(() => {
+              if (input.checked) {
+                console.log("Método seleccionado:", input.value);
+              }
+            }, 50);
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -19,18 +19,18 @@ botoncito.addEventListener('click', function () {
   }
 })
  */
-let botoncito = document.querySelector('#btn')
+let botoncito = document.querySelector("#btn");
 
-botoncito.addEventListener('click', function (e) {
-  e.preventDefault()
-  const nombre = document.querySelector('#nombre').value
-  const edad = document.querySelector('#edad').value
-  const esMiembroSud = document.querySelector('#esMiembroSud').checked
+botoncito.addEventListener("click", function (e) {
+  e.preventDefault();
+  const nombre = document.querySelector("#nombre").value;
+  const edad = document.querySelector("#edad").value;
+  const esMiembroSud = document.querySelector("#esMiembroSud").checked;
   const datos = {
     nombre: nombre,
     edad: edad,
     esMiembroSud: esMiembroSud,
-  }
-  console.log('Datos a enviar:', datos)
-  return datos
-})
+  };
+  console.log("Datos a enviar:", datos);
+  return datos;
+});
