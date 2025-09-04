@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="output.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Opción 1: Tarjeta de crédito -->
+    <div>
+      <label class="custom-radio cursor-pointer">
+        <input
+          type="radio"
+          name="payment-method"
+          class="hidden"
+          value="credit-card"
+        />
+        <div
+          class="border-2 bg-amber-200 border-gray-200 rounded-xl p-4 flex flex-col items-center transition-all hover:border-blue-400 h-full"
+        >
+          <div
+            class="selected-indicator bg-amber-800 absolute top-2 right-2 bg-blue-500 text-white rounded-full w-6 h-6 items-center justify-center"
+          >
+            <i class="fas fa-check text-xs"></i>
+          </div>
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/179/179431.png"
+            alt="Tarjeta de crédito"
+            class="h-16 w-16 mb-3 object-contain"
+          />
+          <span class="text-lg font-medium text-gray-700"
+            >Tarjeta de Crédito</span
+          >
+          <span class="text-sm text-gray-500 mt-1">Pago seguro</span>
+        </div>
+      </label>
+    </div>
+  </body>
+</html>
