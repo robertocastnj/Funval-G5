@@ -1,25 +1,25 @@
 let shopProducts = [
   {
     image: {
-      thumbnail: "./assets/images/image-waffle-thumbnail.jpg",
-      mobile: "./assets/images/image-waffle-mobile.jpg",
-      tablet: "./assets/images/image-waffle-tablet.jpg",
-      desktop: "./assets/images/image-waffle-desktop.jpg",
+      thumbnail: './assets/images/image-waffle-thumbnail.jpg',
+      mobile: './assets/images/image-waffle-mobile.jpg',
+      tablet: './assets/images/image-waffle-tablet.jpg',
+      desktop: './assets/images/image-waffle-desktop.jpg',
     },
-    name: "Waffle with Berries",
-    category: "Waffle",
+    name: 'Waffle with Berries',
+    category: 'Waffle',
     price: 6.5,
     quantity: 2,
   },
   {
     image: {
-      thumbnail: "./assets/images/image-macaron-thumbnail.jpg",
-      mobile: "./assets/images/image-macaron-mobile.jpg",
-      tablet: "./assets/images/image-macaron-tablet.jpg",
-      desktop: "./assets/images/image-macaron-desktop.jpg",
+      thumbnail: './assets/images/image-macaron-thumbnail.jpg',
+      mobile: './assets/images/image-macaron-mobile.jpg',
+      tablet: './assets/images/image-macaron-tablet.jpg',
+      desktop: './assets/images/image-macaron-desktop.jpg',
     },
-    name: "Macaron Mix of Five",
-    category: "Macaron",
+    name: 'Macaron Mix of Five',
+    category: 'Macaron',
     price: 8.0,
     quantity: 1,
   },
@@ -47,27 +47,27 @@ let shopProducts = [
     price: 8.0,
     quantity: 3,
   }, */
-];
+]
 
 /* Llamar a la sección cards */
-let cards = document.getElementById("maincards");
-let order = document.getElementById("order");
-let orderdivbutton = document.getElementById("btn_order");
-let orderbutton = document.getElementById("orderbtn");
-let modalorder = document.getElementById("modalsito");
+let cards = document.getElementById('maincards')
+let order = document.getElementById('order')
+let orderdivbutton = document.getElementById('btn_order')
+let orderbutton = document.getElementById('orderbtn')
+let modalorder = document.getElementById('modalsito')
 
 /* Total del precio a pagar */
-let totalaPagar = 0;
+let totalaPagar = 0
 
 /* Mostrar cada arjeta */
 shopProducts.forEach((product) => {
   /* Suma de cada producto que se va agregando */
-  totalaPagar += product.price * product.quantity;
+  totalaPagar += product.price * product.quantity
 
   /* Creación de las cards */
-  const productElement = document.createElement("div");
+  const productElement = document.createElement('div')
   productElement.className =
-    "w-full flex flex-row p-2 border-1 border-[#f6f2ef]";
+    'w-full flex flex-row p-2 border-1 border-[#f6f2ef]'
   productElement.innerHTML = `
  <div class="w-[30%] flex items-center justify-center sm:w-[15%]">
               <img
@@ -103,14 +103,14 @@ shopProducts.forEach((product) => {
               </div>
             </div>
   
-  `;
-  cards.appendChild(productElement);
-});
+  `
+  cards.appendChild(productElement)
+})
 
 /* Agregar el precio total después de las cards y antes del boton */
-const productTotal = document.createElement("div");
+const productTotal = document.createElement('div')
 productTotal.className =
-  "bg-[#fcf8f5] w-full flex items-center justify-between p-6";
+  'bg-[#fcf8f5] w-full flex items-center justify-between p-6'
 productTotal.innerHTML = `
  <!-- order total message -->
           <span
@@ -123,10 +123,10 @@ productTotal.innerHTML = `
             >$${totalaPagar}</span
           >
   
-  `;
-order.insertBefore(productTotal, orderdivbutton);
+  `
+order.insertBefore(productTotal, orderdivbutton)
 
 /* Colapsar el modal */
-orderbutton.addEventListener("click", function () {
-  modalorder.classList.replace("flex", "hidden");
-});
+orderbutton.addEventListener('click', function () {
+  modalorder.classList.replace('flex', 'hidden')
+})
