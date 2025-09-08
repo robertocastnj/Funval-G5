@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portafolio con Imagen de Fondo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Estilos para el fondo */
+      .bg-custom {
+        background-image: var(--bg-image);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
+
+      /* Overlay para mejor contraste */
+      .overlay {
+        background: rgba(0, 0, 0, 0.7);
+      }
+
+      /* Efecto de vidrio para las tarjetas */
+      .glass-card {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      /* Ajuste para móviles */
+      @media (max-width: 768px) {
+        .bg-custom {
+          background-attachment: scroll;
+        }
+      }
+    </style>
+  </head>
+  <body class="min-h-screen bg-gray-900">
+    <div class="container mx-auto px-4 py-12">
+      <h1 class="text-4xl font-bold text-center text-white mb-8">
+        Solución para Background Image
+      </h1>
+
+      <!-- Selector de rutas -->
+      <div class="bg-gray-800 rounded-lg p-6 mb-8">
+        <h2 class="text-2xl font-semibold text-white mb-4">
+          Selecciona la ruta correcta para tu imagen:
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <button
+            onclick="changeBackground('Practica-4-portafolio/images/quantum_sq.gif')"
+            class="bg-blue-600 hover:bg-blue-700 text-white py-3 px-4 rounded-lg text-left"
+          >
+            <span class="font-semibold">Opción 1:</span><br />
+            Practica-4-portafolio/images/quantum_sq.gif
+          </button>
+
+          <button
+            onclick="changeBackground('./Practica-4-portafolio/images/quantum_sq.gif')"
+            class="bg-blue-600 hover:bg-blue-700 text-white py-3 px-4 rounded-lg text-left"
+          >
+            <span class="font-semibold">Opción 2:</span><br />
+            ./Practica-4-portafolio/images/quantum_sq.gif
+          </button>
+
+          <button
+            onclick="changeBackground('/Practica-4-portafolio/images/quantum_sq.gif')"
+            class="bg-blue-600 hover:bg-blue-700 text-white py-3 px-4 rounded-lg text-left"
+          >
+            <span class="font-semibold">Opción 3:</span><br />
+            /Practica-4-portafolio/images/quantum_sq.gif
+          </button>
+
+          <button
+            onclick="changeBackground('../images/quantum_sq.gif')"
+            class="bg-blue-600 hover:bg-blue-700 text-white py-3 px-4 rounded-lg text-left"
+          >
+            <span class="font-semibold">Opción 4:</span><br />
+            ../images/quantum_sq.gif
+          </button>
+        </div>
+
+        <div class="mt-6">
+          <label class="block text-white mb-2"
+            >O ingresa una ruta personalizada:</label
+          >
+          <div class="flex">
+            <input
+              type="text"
+              id="customPath"
+              placeholder="ruta/a/la/imagen.gif"
+              class="flex-grow px-4 py-2 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+            <button
+              onclick="applyCustomPath()"
+              class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-r-lg"
+            >
+              Aplicar
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Demo del portafolio -->
+      <div
+        id="demoSection"
+        class="bg-custom rounded-lg overflow-hidden min-h-[500px]"
+      >
+        <div
+          class="overlay min-h-[500px] flex flex-col items-center justify-center p-6"
+        >
+          <h2 class="text-3xl font-bold text-white mb-4">Mi Portafolio</h2>
+          <p class="text-xl text-gray-200 mb-8 text-center">
+            Desarrollador creativo con pasión por la innovación
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-4xl">
+            <div class="glass-card rounded-xl p-6 text-center">
+              <div
+                class="bg-blue-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <span class="text-white text-2xl">💻</span>
+              </div>
+              <h3 class="text-xl font-semibold text-white mb-2">
+                Desarrollo Web
+              </h3>
+              <p class="text-gray-200">Sitios modernos y responsive</p>
+            </div>
+
+            <div class="glass-card rounded-xl p-6 text-center">
+              <div
+                class="bg-green-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <span class="text-white text-2xl">📱</span>
+              </div>
+              <h3 class="text-xl font-semibold text-white mb-2">
+                Apps Móviles
+              </h3>
+              <p class="text-gray-200">Aplicaciones nativas e híbridas</p>
+            </div>
+
+            <div class="glass-card rounded-xl p-6 text-center">
+              <div
+                class="bg-purple-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <span class="text-white text-2xl">🎨</span>
+              </div>
+              <h3 class="text-xl font-semibold text-white mb-2">
+                Diseño UX/UI
+              </h3>
+              <p class="text-gray-200">Interfaces intuitivas</p>
+            </div>
+          </div>
+
+          <button
+            class="mt-8 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition duration-300"
+          >
+            Contactar Ahora
+          </button>
+        </div>
+      </div>
+
+      <div class="mt-8 bg-gray-800 rounded-lg p-6">
+        <h2 class="text-2xl font-semibold text-white mb-4">Instrucciones:</h2>
+        <ol class="list-decimal list-inside text-gray-200 space-y-2">
+          <li>
+            Haz clic en cada una de las opciones de ruta para probar cuál
+            funciona
+          </li>
+          <li>
+            Si ninguna funciona, usa la ruta personalizada con la ubicación
+            correcta
+          </li>
+          <li>Una vez que encuentres la ruta correcta, úsala en tu proyecto</li>
+          <li>
+            La ruta correcta se aplicará al ejemplo de portafolio de arriba
+          </li>
+        </ol>
+      </div>
+    </div>
+
+    <script>
+      function changeBackground(path) {
+        document.documentElement.style.setProperty(
+          '--bg-image',
+          `url('${path}')`
+        )
+        document.getElementById('customPath').value = path
+
+        // Mostrar notificación
+        showNotification(`Ruta cambiada a: ${path}`)
+      }
+
+      function applyCustomPath() {
+        const customPath = document.getElementById('customPath').value
+        if (customPath) {
+          changeBackground(customPath)
+        }
+      }
+
+      function showNotification(message) {
+        // Crear elemento de notificación
+        const notification = document.createElement('div')
+        notification.className =
+          'fixed top-4 right-4 bg-green-600 text-white px-4 py-2 rounded-lg shadow-lg transition-opacity duration-300'
+        notification.textContent = message
+        notification.id = 'pathNotification'
+
+        document.body.appendChild(notification)
+
+        // Eliminar después de 3 segundos
+        setTimeout(() => {
+          notification.remove()
+        }, 3000)
+      }
+
+      // Inicializar con la primera opción
+      changeBackground('Practica-4-portafolio/images/quantum_sq.gif')
+    </script>
+  </body>
+</html>
