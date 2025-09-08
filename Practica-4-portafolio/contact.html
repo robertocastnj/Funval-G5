@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en" id="all" class="w-full h-full">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Styles/output.css" />
+    <link rel="stylesheet" href="Styles/styles.css" />
+    <script src="JavaScript/main.js" defer type="module"></script>
+    <title>Portafolio</title>
+  </head>
+  <body
+    class="w-full h-full flex flex-col bg-black text-white font-mono dark:bg-gradient-to-b from-[#808080] to-[#606060] dark:text-black"
+  >
+    <!-- Encabezado-->
+    <div class="w-[94%] flex flex-row ml-[3%] gap-2 justify-end items-end">
+      <!-- Boton de darkmode -->
+      <div class="h-full">
+        <label
+          class="relative inline-block h-4 w-6 cursor-pointer rounded-full bg-gray-300 transition [-webkit-tap-highlight-color:_transparent] has-[:checked]:bg-gray-900"
+        >
+          <input class="peer sr-only" id="themeToggle" type="checkbox" />
+          <span
+            class="absolute inset-y-0 start-0 m-1 size-2 rounded-full bg-gray-300 ring-[6px] ring-inset ring-white transition-all peer-checked:start-1 peer-checked:w-2 peer-checked:bg-white peer-checked:ring-transparent"
+          ></span>
+        </label>
+      </div>
+    </div>
+    <!--  -->
+    <section
+      class="h-[92%] w-[94%] flex flex-row ml-[3%] quantum-bg border-2 border-[#b9b9b7] quantum-bg_light"
+    >
+      <section class="w-[40%]">
+        <header class="flex flex-col gap-2 p-4 text-sm rounded-lg">
+          <h1 class="h1presentation">Roberto A. Castillo</h1>
+          <p class="frontendText">Front-End Developer</p>
+        </header>
+        <!-- Botón de despliegue de menú -->
+        <button id="btn_menu" class="p-4 flex cursor-pointer">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            id="menuop"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="buttonShow"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            id="collapse"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="buttonHide"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m4.5 18.75 7.5-7.5 7.5 7.5"
+            />
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m4.5 12.75 7.5-7.5 7.5 7.5"
+            />
+          </svg>
+        </button>
+        <nav id="navmenu" class="p-4 hidden">
+          <ul
+            class="flex flex-col gap-4 text-[0.8rem] sm:text-[1rem] md:text-[1.2rem]"
+          >
+            <li class=""><a href="index.html">Home</a></li>
+            <li class="hover:scale-110"><a href="about.html">About</a></li>
+            <li class="hover:scale-110">
+              <a href="projects.html">Projects</a>
+            </li>
+            <li class="hover:scale-110">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-4 sm:size-5 md:size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z"
+                />
+              </svg>
+            </li>
+          </ul>
+        </nav>
+      </section>
+      <!-- Main section -->
+      <section
+        class="w-[60%] p-[2%] gap-8 flex flex-col items-end overflow-y-auto [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch] border-black dark:border-white"
+      >
+        <h2 class="text-right text-[1rem] font-bold sm:text-[1.5rem]">
+          Lets talk!
+        </h2>
+        <div class="p-6 rounded-lg flex flex-col justify-end items-end">
+          <form
+            id="contactForm"
+            action="https://formsubmit.co/roberto.castnj@gmail.com"
+            method="POST"
+          >
+            <!-- Nombre -->
+            <div class="mb-4">
+              <label
+                class="block text-sm font-medium mb-1 text-right"
+                for="name"
+                >Name</label
+              >
+              <input
+                type="text"
+                id="name"
+                name="name"
+                class="w-full border p-2 rounded"
+                required
+              />
+            </div>
+
+            <!-- Correo -->
+            <div class="mb-4">
+              <label
+                class="block text-sm font-medium mb-1 text-right"
+                for="email"
+                >e-mail</label
+              >
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="w-full border p-2 rounded"
+                required
+              />
+            </div>
+
+            <!-- Mensaje -->
+            <div class="mb-4">
+              <label
+                class="block text-sm font-medium mb-1 text-right"
+                for="message"
+                >Context</label
+              >
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                class="w-full border p-2 rounded"
+                required
+              ></textarea>
+            </div>
+
+            <!-- Botón -->
+            <button
+              type="submit"
+              class="px-4 py-2 rounded border-2 hover:cursor-pointer"
+            >
+              Enviar
+            </button>
+          </form>
+        </div>
+      </section>
+    </section>
+    <!-- Sección de contacto -->
+    <div
+      id="contact_section"
+      class="w-[94%] h-6 p-0.5 flex flex-row ml-[3%] gap-3 items-end"
+    ></div>
+  </body>
+</html>

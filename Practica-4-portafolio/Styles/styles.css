@@ -1,0 +1,64 @@
+.quantum-bg {
+  background-image: url('/Practica-4-portafolio/images/quantum_sq.gif');
+  object-fit: cover;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.quantum-bg_light {
+  &:where(.dark, .dark *) {
+    background-image: url('/Practica-4-portafolio/images/quantum_sq_light.gif');
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+}
+.h1presentation {
+  font-size: 1rem;
+  font-weight: var(--font-weight-bold) /* 700 */;
+  @media (width >= 40rem /* 640px */) {
+    font-size: 1.4rem /* 22.4px */;
+  }
+  @media (width >= 48rem /* 768px */) {
+    font-size: 1.8rem /* 28.8px */;
+  }
+}
+
+.frontendText {
+  font-size: 0.8rem /* 16px */;
+  @media (width >= 40rem /* 640px */) {
+    font-size: 1.2rem /* 19.2px */;
+  }
+  @media (width >= 48rem /* 768px */) {
+    font-size: 1.6rem /* 25.6px */;
+  }
+}
+
+.buttonShow {
+  width: calc(var(--spacing) * 7) /* 1.75rem = 28px */;
+  height: calc(var(--spacing) * 7) /* 1.75rem = 28px */;
+  &:hover {
+    @media (hover: hover) {
+      --tw-scale-x: 110%;
+      --tw-scale-y: 110%;
+      --tw-scale-z: 110%;
+      scale: var(--tw-scale-x) var(--tw-scale-y);
+    }
+  }
+  display: flex;
+  @media (width >= 40rem /* 640px */) {
+    width: calc(var(--spacing) * 8) /* 2rem = 32px */;
+    height: calc(var(--spacing) * 8) /* 2rem = 32px */;
+  }
+  @media (width >= 48rem /* 768px */) {
+    width: calc(var(--spacing) * 9) /* 2.25rem = 36px */;
+    height: calc(var(--spacing) * 9) /* 2.25rem = 36px */;
+  }
+}
+
+.buttonHide {
+  display: none;
+}

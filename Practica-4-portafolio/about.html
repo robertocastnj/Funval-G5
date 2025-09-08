@@ -3,50 +3,88 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="output.css" />
-    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="Styles/output.css" />
+    <link rel="stylesheet" href="Styles/styles.css" />
+    <script src="JavaScript/main.js" defer type="module"></script>
     <title>Portafolio</title>
   </head>
   <body
     class="w-full h-full flex flex-col bg-black text-white font-mono dark:bg-gradient-to-b from-[#808080] to-[#606060] dark:text-black"
   >
+    <!-- Encabezado-->
     <div class="w-[94%] flex flex-row ml-[3%] gap-2 justify-end items-end">
+      <!-- Boton de darkmode -->
       <div class="h-full">
         <label
-          class="relative inline-block h-full w-10 cursor-pointer rounded-full bg-gray-300 transition [-webkit-tap-highlight-color:_transparent] has-[:checked]:bg-gray-900"
+          class="relative inline-block h-4 w-6 cursor-pointer rounded-full bg-gray-300 transition [-webkit-tap-highlight-color:_transparent] has-[:checked]:bg-gray-900"
         >
-          <input class="peer sr-only" id="btn" type="checkbox" />
+          <input class="peer sr-only" id="themeToggle" type="checkbox" />
           <span
-            class="absolute inset-y-0 start-0 m-1 size-4 rounded-full bg-gray-300 ring-[6px] ring-inset ring-white transition-all peer-checked:start-8 peer-checked:w-2 peer-checked:bg-white peer-checked:ring-transparent"
+            class="absolute inset-y-0 start-0 m-1 size-2 rounded-full bg-gray-300 ring-[6px] ring-inset ring-white transition-all peer-checked:start-1 peer-checked:w-2 peer-checked:bg-white peer-checked:ring-transparent"
           ></span>
         </label>
       </div>
     </div>
+    <!--  -->
     <section
-      class="h-[92%] w-[94%] flex flex-row ml-[3%] bg-[url('quantum_sq.gif')] object-cover bg-cover bg-center bg-no-repeat border-2 border-[#b9b9b7] dark:bg-[url('quantum_sq_light.gif')]"
+      class="h-[92%] w-[94%] flex flex-row ml-[3%] quantum-bg border-2 border-[#b9b9b7] quantum-bg_light"
     >
-      <section class="w-[50%]">
+      <section class="w-[40%]">
         <header class="flex flex-col gap-2 p-4 text-sm rounded-lg">
-          <h1 class="text-[1rem] font-bold sm:text-[1.6rem] md:text-[1.8rem]">
-            Roberto A. Castillo
-          </h1>
-          <p class="text-[0.8rem] sm:text-[1.3rem] md:text-[1.6rem]">
-            Front-End Developer
-          </p>
+          <h1 class="h1presentation">Roberto A. Castillo</h1>
+          <p class="frontendText">Front-End Developer</p>
         </header>
-        <nav class="p-4">
+        <!-- Botón de despliegue de menú -->
+        <button id="btn_menu" class="p-4 flex cursor-pointer">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            id="menuop"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="buttonShow"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            id="collapse"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="buttonHide"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m4.5 18.75 7.5-7.5 7.5 7.5"
+            />
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m4.5 12.75 7.5-7.5 7.5 7.5"
+            />
+          </svg>
+        </button>
+        <nav id="navmenu" class="p-4 hidden">
           <ul
             class="flex flex-col gap-4 text-[0.8rem] sm:text-[1rem] md:text-[1.2rem]"
           >
             <li class=""><a href="index.html">Home</a></li>
-            <li class="">
+            <li class="hover:scale-110">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                class="size-3 sm:size-4 md:size-5"
+                class="size-4 sm:size-5 md:size-6"
               >
                 <path
                   stroke-linecap="round"
@@ -55,17 +93,20 @@
                 />
               </svg>
             </li>
-            <li class=""><a href="">Projects</a></li>
-            <li class=""><a href="">Contact</a></li>
+            <li class="hover:scale-110">
+              <a href="projects.html">Projects</a>
+            </li>
+            <li class="hover:scale-110"><a href="contact.html">Contact</a></li>
           </ul>
         </nav>
       </section>
+      <!-- Main section -->
       <section
-        class="w-[50%] p-[2%] gap-8 flex flex-col items-end overflow-y-auto [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
+        class="w-[60%] p-[2%] gap-8 flex flex-col items-end overflow-y-auto [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
       >
         <div class="h-auto flex flex-col items-end justify-end">
           <img
-            src="foto.png"
+            src="images/foto.png"
             alt=""
             class="object-cover h-60 rounded-b-full sm:h-70 md:h-80"
           />
@@ -74,46 +115,47 @@
           About me
         </h2>
         <p class="text-right text-[0.7rem] sm:text-[1rem]">
-          Electronics engineer turned web developer, blending analytical
-          thinking with creative solutions to build efficient and scalable
-          digital experiences.
+          I'm a Frontend Developer with a strong foundation in Electronic
+          Engineering, blending technical expertise with creative design to
+          build engaging and functional web experiences. My engineering
+          background gives me a unique perspective on problem-solving and a
+          systematic approach to developing responsive, user-friendly
+          interfaces.
         </p>
         <p class="text-right text-[0.7rem] sm:text-[1rem]">
-          Electronics engineer turned web developer, blending analytical
-          thinking with creative solutions to build efficient and scalable
-          digital experiences.
+          Currently, I'm expanding my skills in modern frontend technologies
+          while working on personal projects that combine my passion for clean
+          code and intuitive design. My experience in content creation has honed
+          my ability to present complex information in visually appealing ways,
+          ensuring users have seamless interactions with the platforms I
+          develop.
         </p>
         <p class="text-right text-[0.7rem] sm:text-[1rem]">
-          Electronics engineer turned web developer, blending analytical
-          thinking with creative solutions to build efficient and scalable
-          digital experiences.
+          I specialize in creating responsive layouts that work across all
+          devices, paying close attention to performance optimization and
+          accessibility standards. My technical skills include HTML5, CSS3,
+          JavaScript, and responsive design principles, complemented by my
+          experience with Mathematica that has strengthened my logical thinking
+          and problem-solving abilities.
         </p>
         <p class="text-right text-[0.7rem] sm:text-[1rem]">
-          Electronics engineer turned web developer, blending analytical
-          thinking with creative solutions to build efficient and scalable
-          digital experiences.
+          What sets me apart is my multidisciplinary background - from
+          electronic engineering to academic content creation - which allows me
+          to bridge the gap between technical functionality and user experience.
+          I'm passionate about creating web solutions that are not only visually
+          appealing but also technically robust and user-centered.
         </p>
-        <p class="text-right text-[0.7rem] sm:text-[1rem]">
-          Electronics engineer turned web developer, blending analytical
-          thinking with creative solutions to build efficient and scalable
-          digital experiences.
-        </p>
-        <p class="text-right text-[0.7rem] sm:text-[1rem]">
-          Electronics engineer turned web developer, blending analytical
-          thinking with creative solutions to build efficient and scalable
-          digital experiences.
-        </p>
-        <p class="text-right text-[0.7rem] sm:text-[1rem]">
-          Electronics engineer turned web developer, blending analytical
-          thinking with creative solutions to build efficient and scalable
-          digital experiences.
-        </p>
-        <p class="text-right text-[0.7rem] sm:text-[1rem]">
-          Electronics engineer turned web developer, blending analytical
-          thinking with creative solutions to build efficient and scalable
-          digital experiences.
-        </p>
+        <h2 class="text-right text-[1rem] font-bold sm:text-[1.5rem]">
+          Skills
+        </h2>
+        <!-- Skills section -->
+        <div id="skills_section" class="w-full flex flex-col gap-4"></div>
       </section>
     </section>
+    <!-- Sección de contacto -->
+    <div
+      id="contact_section"
+      class="w-[94%] h-6 p-0.5 flex flex-row ml-[3%] gap-3 items-end"
+    ></div>
   </body>
 </html>
