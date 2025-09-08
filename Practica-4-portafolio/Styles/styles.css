@@ -1,5 +1,5 @@
 .quantum-bg {
-  background-image: url('./images/quantum_sq.gif');
+  background-image: url('/Practica-4-portafolio/images/quantum_sq.gif');
   object-fit: cover;
   background-size: cover;
   background-position: center;
@@ -8,8 +8,9 @@
 }
 .quantum-bg_light {
   &:where(.dark, .dark *) {
-    background-image: url('./images/quantum_sq_light.gif');
+    background-image: url('/Practica-4-portafolio/images/quantum_sq_light.gif');
     object-fit: cover;
+
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
