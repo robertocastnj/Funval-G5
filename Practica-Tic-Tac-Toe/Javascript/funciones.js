@@ -44,6 +44,14 @@ function btnTurn(n) {
   }
 }
 
+/* ------------------- Desactivar tablero ----------------- */
+function disableBoard() {
+  for (let i = 1; i <= totalPositions; i++) {
+    const btn = document.getElementById(`bt${i}`)
+    btn.disabled = true
+  }
+}
+
 /* --------------- X mark --------------------------------- */
 function xmark(position) {
   const xelement = document.createElement('div')
@@ -64,6 +72,8 @@ function xmark(position) {
   position.appendChild(xelement)
 }
 
+/* --------------- O mark --------------------------------- */
+
 function omark(position) {
   const oelement = document.createElement('div')
   oelement.className = `h-[60%] `
@@ -81,26 +91,89 @@ function omark(position) {
   position.appendChild(oelement)
 }
 
-/* --------------- Buttons Click --------------- */
+/* ------------------- Checar ganador --------------------- */
+function checkWinner(board) {
+  const winPatterns = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8], // filas
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8], // columnas
+    [0, 4, 8],
+    [2, 4, 6], // diagonales
+  ]
+
+  for (let pattern of winPatterns) {
+    const [a, b, c] = pattern
+    if (board[a] !== 0 && board[a] === board[b] && board[a] === board[c]) {
+      return board[a] // 1 = X, 2 = O
+    }
+  }
+
+  if (!board.includes(0)) return 'draw' // empate
+  return null // sigue el juego
+}
+
+/* --------------- Juego --------------- */
 function positionClick(pos, button, occupied, turn) {
   btnTurn(turn + 1)
 
   /* Verificar si la posición ya está ocupada */
   if (occupied[pos - 1] != 0) {
     alert('¡Esa posición ya está ocupada!')
-    return
+    return { occupied, turn, finished: false }
   }
 
   /* Marcar la casilla con la marca correspondiente */
   if ((turn + 1) % 2 == 1) {
     xmark(button)
     occupied[pos - 1] = 1
-    turn++
   } else {
     omark(button)
     occupied[pos - 1] = 2
-    turn++
   }
-  return { occupied, turn }
+  turn++
+
+  // Revisar estado del juego
+  const result = checkWinner(occupied)
+  if (result === 1) {
+    alert('¡Ganó X!')
+    disableBoard()
+    return { occupied, turn, finished: true }
+  } else if (result === 2) {
+    alert('¡Ganó O!')
+    disableBoard()
+    return { occupied, turn, finished: true }
+  } else if (result === 'draw') {
+    alert('¡Es empate!')
+    disableBoard()
+    return { occupied, turn, finished: true }
+  }
+
+  return { occupied, turn, finished: false }
 }
-export { setActive, validateSelection, btnTurn, xmark, omark, positionClick }
+
+/* ------------------- CPU Move --------------------------- */
+function cpuMove(board, turn) {
+  const freePositions = board
+    .map((val, idx) => (val === 0 ? idx + 1 : null))
+    .filter((val) => val !== null)
+
+  if (freePositions.length === 0)
+    return { occupied: board, turn, finished: false }
+
+  const choice = freePositions[Math.floor(Math.random() * freePositions.length)]
+  const btn = document.getElementById(`bt${choice}`)
+
+  return positionClick(choice, btn, board, turn)
+}
+export {
+  setActive,
+  validateSelection,
+  btnTurn,
+  xmark,
+  omark,
+  positionClick,
+  cpuMove,
+}
