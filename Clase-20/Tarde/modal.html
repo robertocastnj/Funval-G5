@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="output.css" />
+    <script src="main.js" defer></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div
+      id="modalsito"
+      class="fixed w-full h-full bg-black/50 flex items-end sm:items-center justify-center"
+    >
+      <div
+        id="order"
+        class="bg-white w-full h-[90%] text-black rounded-2xl p-6 flex flex-col sm:w-auto h-auto"
+      >
+        <!-- Check Icon -->
+        <div class="w-full pt-4 sm:pt-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="#3b9b7b"
+            class="size-12 sm:size-10"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+            />
+          </svg>
+        </div>
+        <!-- Order message -->
+        <div class="flex flex-col pt-4 pb-6 sm:pt-2">
+          <h2 class="font-bold text-[2.7rem] text-[#27140d] sm:text-[2.2rem]">
+            Order Confirmed
+          </h2>
+          <span class="text-[0.9rem] text-[#908684] sm:text-[0.8rem]"
+            >We hope you enjoy your food!</span
+          >
+        </div>
+        <!-- Main cards -->
+        <div
+          id="maincards"
+          class="bg-[#fcf8f5] w-full flex flex-col items-center justify-center"
+        ></div>
+        <!-- Start new order button -->
+        <div
+          id="btn_order"
+          class="w-full flex justify-center rounded-2xl items-center bg-[#c83b0e] mt-8"
+        >
+          <button id="orderbtn" class="text-[#ffeedd] p-4 font-bold">
+            Start New Order
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

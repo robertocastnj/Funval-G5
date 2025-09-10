@@ -1,0 +1,7 @@
+
+
+1) cards con detalles (imagen, descripcion, precio, btn sumar precio)
+
+2) modal carrito que suma pedidos ( btn para confirmar orden)
+
+3) modal para confirmar compra con detalles.
