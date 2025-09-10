@@ -12,7 +12,7 @@
   >
     <div
       id="modalsito"
-      class="fixed hidden w-full h-full bg-black/50 flex items-end sm:items-center justify-center"
+      class="hidden w-full h-full bg-black/50 flex justify-center items-center"
     >
       <div
         class="relative z-100 text-2xl w-full h-auto flex flex-col items-center justify-center gap-2 p-8 bg-[#1f3540]"
@@ -25,7 +25,7 @@
               id="player_win_xsym"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 8 8"
-              class="object-cover block h-full"
+              class="object-cover hidden h-full"
             >
               <path
                 fill="#33c3be"
@@ -44,25 +44,24 @@
               />
             </svg>
           </div>
-          <p class="text-[#33c3be] font-bold">TAKES THE ROUND</p>
+          <p id="roudmsg" class="text-[#33c3be] font-bold">TIE</p>
         </div>
         <!-- buttons -->
-        <div class="mt-2">
+        <div class="mt-2 flex flex-row gap-4">
           <a href="index.html">
             <button
-              class="bg-[#a8bec9] p-3 rounded-xl text-[0.8rem] text-[#3d505a] font-bold"
+              class="bg-[#a8bec9] p-3 rounded-xl text-[0.8rem] text-[#3d505a] font-bold hover:scale-105"
             >
               QUIT
             </button>
           </a>
 
-          <a href="index.html">
-            <button
-              class="bg-[#f0b136] p-3 rounded-xl text-[#282b1f] text-[0.8rem] font-bold"
-            >
-              NEXT ROUND
-            </button>
-          </a>
+          <button
+            id="round"
+            class="bg-[#f0b136] p-3 rounded-xl text-[#282b1f] text-[0.8rem] font-bold hover:scale-105"
+          >
+            NEXT ROUND
+          </button>
         </div>
       </div>
     </div>
@@ -135,9 +134,10 @@
         </div>
         <!-- go back section -->
         <div
-          class="h-[2.5rem] w-[2.5rem] rounded-sm bg-[#6c8997] flex justify-center"
+          class="h-[2.5rem] w-[2.5rem] rounded-sm bg-[#6c8997] flex justify-center hover:scale-105"
         >
           <button
+            id="reload"
             class="h-[2.3rem] w-[2.5rem] rounded-sm bg-[#a8bec9] flex justify-center items-center"
           >
             <svg
@@ -253,22 +253,22 @@
           <div
             class="bg-[#31c4be] rounded-sm h-[4rem] w-[5.5rem] flex flex-col items-center justify-center"
           >
-            <p class="text-[0.7rem] font-bold text-[#142e36]">X (YOU)</p>
-            <p class="font-bold text-[#142e36]">14</p>
+            <p id="xid" class="text-[0.7rem] font-bold text-[#142e36]"></p>
+            <p id="xwin" class="font-bold text-[#142e36]"></p>
           </div>
           <!-- Game data 2-->
           <div
             class="bg-[#a8bec9] rounded-sm h-[4rem] w-[5.5rem] flex flex-col items-center justify-center"
           >
             <p class="text-[0.7rem] font-bold text-[#192d36]">TIES</p>
-            <p class="font-bold text-[#192d36]">32</p>
+            <p id="tiewin" class="font-bold text-[#192d36]"></p>
           </div>
           <!-- Game data 3-->
           <div
             class="bg-[#f2b237] rounded-sm h-[4rem] w-[5.5rem] flex flex-col items-center justify-center"
           >
-            <p class="text-[0.7rem] font-bold text-[#1e2a29]">O (CPU)</p>
-            <p class="font-bold text-[#1e2a29]">11</p>
+            <p id="oid" class="text-[0.7rem] font-bold text-[#1e2a29]"></p>
+            <p id="owin" class="font-bold text-[#1e2a29]"></p>
           </div>
         </div>
       </div>
