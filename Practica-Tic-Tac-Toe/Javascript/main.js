@@ -28,9 +28,8 @@ if (window.location.pathname.endsWith("game.html")) {
   let board = [0, 0, 0, 0, 0, 0, 0, 0, 0];
 
   // 🔹 Recuperar configuración del localStorage
-  const player1Choice = localStorage.getItem("player1") || "X"; // "X" o "O"
-  const mode = localStorage.getItem("game") || "pvp"; // "pvp" o "cpu"
-
+  const player1Choice = localStorage.getItem("player1"); // "X" o "O"
+  const mode = localStorage.getItem("game"); // "pvp" o "cpu"
   // 🔹 Asignar figuras a cada jugador
   let players = {};
   if (player1Choice === "X") {
