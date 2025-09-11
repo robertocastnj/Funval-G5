@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "nombre": "Ana Torres",
+    "edad": 25,
+    "email": "ana.torres@example.com",
+    "ciudad": "La Paz",
+    "telefono": "76543210",
+    "ocupacion": "Ingeniera de Software",
+    "hobbies": ["Lectura", "Ciclismo", "Cocina"]
+  },
+  {
+    "id": 2,
+    "nombre": "Luis Fernández",
+    "edad": 32,
+    "email": "luis.fernandez@example.com",
+    "ciudad": "Cochabamba",
+    "telefono": "76483920",
+    "ocupacion": "Diseñador Gráfico",
+    "hobbies": ["Fotografía", "Viajes", "Música"]
+  },
+  {
+    "id": 3,
+    "nombre": "María López",
+    "edad": 28,
+    "email": "maria.lopez@example.com",
+    "ciudad": "Santa Cruz",
+    "telefono": "78901234",
+    "ocupacion": "Doctora",
+    "hobbies": ["Yoga", "Pintura", "Senderismo"]
+  },
+  {
+    "id": 4,
+    "nombre": "Carlos Gutiérrez",
+    "edad": 40,
+    "email": "carlos.gutierrez@example.com",
+    "ciudad": "Tarija",
+    "telefono": "76598741",
+    "ocupacion": "Profesor",
+    "hobbies": ["Lectura", "Ajedrez", "Historia"]
+  },
+  {
+    "id": 5,
+    "nombre": "Sofía Ramírez",
+    "edad": 22,
+    "email": "sofia.ramirez@example.com",
+    "ciudad": "Oruro",
+    "telefono": "75839204",
+    "ocupacion": "Estudiante",
+    "hobbies": ["Baile", "Series", "Videojuegos"]
+  },
+  {
+    "id": 6,
+    "nombre": "Miguel Sánchez",
+    "edad": 35,
+    "email": "miguel.sanchez@example.com",
+    "ciudad": "Sucre",
+    "telefono": "77765432",
+    "ocupacion": "Arquitecto",
+    "hobbies": ["Deportes", "Viajes", "Fotografía"]
+  },
+  {
+    "id": 7,
+    "nombre": "Valeria Castillo",
+    "edad": 29,
+    "email": "valeria.castillo@example.com",
+    "ciudad": "Potosí",
+    "telefono": "76473829",
+    "ocupacion": "Abogada",
+    "hobbies": ["Lectura", "Natación", "Cocina"]
+  },
+  {
+    "id": 8,
+    "nombre": "Andrés Molina",
+    "edad": 27,
+    "email": "andres.molina@example.com",
+    "ciudad": "Beni",
+    "telefono": "76789012",
+    "ocupacion": "Contador",
+    "hobbies": ["Correr", "Música", "Películas"]
+  },
+  {
+    "id": 9,
+    "nombre": "Camila Vargas",
+    "edad": 31,
+    "email": "camila.vargas@example.com",
+    "ciudad": "Pando",
+    "telefono": "76654321",
+    "ocupacion": "Marketing Digital",
+    "hobbies": ["Redes Sociales", "Moda", "Viajes"]
+  },
+  {
+    "id": 10,
+    "nombre": "Javier Ortega",
+    "edad": 26,
+    "email": "javier.ortega@example.com",
+    "ciudad": "Chuquisaca",
+    "telefono": "76544321",
+    "ocupacion": "Músico",
+    "hobbies": ["Guitarra", "Canto", "Composición"]
+  }
+]
